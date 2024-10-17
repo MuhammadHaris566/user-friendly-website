@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customizable Professional Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Professional Website</h1>
+  </header>
+
+  <!-- Display area for users -->
+  <main id="content-display">
+    <h2>Content displayed by the owner</h2>
+    <div id="content-area">
+      <!-- Content will be added here by the owner -->
+    </div>
+  </main>
+
+  <!-- Admin login and control panel (hidden for regular users) -->
+  <section id="admin-section">
+    <h2>Admin Panel (Owner Only)</h2>
+    <div id="login-section">
+      <input type="password" id="admin-password" placeholder="Enter Admin Password">
+      <button onclick="login()">Login</button>
+    </div>
+
+    <div id="admin-controls" style="display: none;">
+      <h3>Change Admin Password</h3>
+      <input type="password" id="new-password" placeholder="New Password">
+      <button onclick="changePassword()">Change Password</button>
+
+      <h3>Add Content</h3>
+      <textarea id="content-input" placeholder="Enter text (optional)"></textarea>
+      <input type="file" id="image-upload" accept="image/*">
+      <button onclick="addContent()">Add Content</button>
+      <button onclick="removeAllContent()">Remove All Content</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
